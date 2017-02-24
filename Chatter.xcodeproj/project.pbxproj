@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5FE5C1801E5FA2120061FAA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE5C17F1E5FA2120061FAA2 /* AppDelegate.swift */; };
-		5FE5C1821E5FA2120061FAA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE5C1811E5FA2120061FAA2 /* ViewController.swift */; };
 		5FE5C1851E5FA2120061FAA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FE5C1831E5FA2120061FAA2 /* Main.storyboard */; };
 		5FE5C1871E5FA2120061FAA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FE5C1861E5FA2120061FAA2 /* Assets.xcassets */; };
 		5FE5C18A1E5FA2120061FAA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FE5C1881E5FA2120061FAA2 /* LaunchScreen.storyboard */; };
 		5FE5C1921E5FA4A40061FAA2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE5C1911E5FA4A40061FAA2 /* LoginViewController.swift */; };
+		5FE5C1961E5FB19A0061FAA2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE5C1951E5FB19A0061FAA2 /* ChatViewController.swift */; };
+		5FE5C1991E5FBFCB0061FAA2 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE5C1981E5FBFCB0061FAA2 /* ChatCell.swift */; };
 		F9689407A967D9EE3C6C6A6D /* Pods_Chatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFF983732A853E9E15812B9 /* Pods_Chatter.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +23,13 @@
 		4EFF983732A853E9E15812B9 /* Pods_Chatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FE5C17C1E5FA2120061FAA2 /* Chatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FE5C17F1E5FA2120061FAA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5FE5C1811E5FA2120061FAA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5FE5C1841E5FA2120061FAA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FE5C1861E5FA2120061FAA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FE5C1891E5FA2120061FAA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FE5C18B1E5FA2120061FAA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FE5C1911E5FA4A40061FAA2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5FE5C1951E5FB19A0061FAA2 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		5FE5C1981E5FBFCB0061FAA2 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,15 +82,24 @@
 		5FE5C17E1E5FA2120061FAA2 /* Chatter */ = {
 			isa = PBXGroup;
 			children = (
+				5FE5C1971E5FBFAB0061FAA2 /* views */,
 				5FE5C17F1E5FA2120061FAA2 /* AppDelegate.swift */,
 				5FE5C1911E5FA4A40061FAA2 /* LoginViewController.swift */,
-				5FE5C1811E5FA2120061FAA2 /* ViewController.swift */,
+				5FE5C1951E5FB19A0061FAA2 /* ChatViewController.swift */,
 				5FE5C1831E5FA2120061FAA2 /* Main.storyboard */,
 				5FE5C1861E5FA2120061FAA2 /* Assets.xcassets */,
 				5FE5C1881E5FA2120061FAA2 /* LaunchScreen.storyboard */,
 				5FE5C18B1E5FA2120061FAA2 /* Info.plist */,
 			);
 			path = Chatter;
+			sourceTree = "<group>";
+		};
+		5FE5C1971E5FBFAB0061FAA2 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				5FE5C1981E5FBFCB0061FAA2 /* ChatCell.swift */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +226,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FE5C1921E5FA4A40061FAA2 /* LoginViewController.swift in Sources */,
-				5FE5C1821E5FA2120061FAA2 /* ViewController.swift in Sources */,
+				5FE5C1991E5FBFCB0061FAA2 /* ChatCell.swift in Sources */,
+				5FE5C1961E5FB19A0061FAA2 /* ChatViewController.swift in Sources */,
 				5FE5C1801E5FA2120061FAA2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
